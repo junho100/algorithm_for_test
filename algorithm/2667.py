@@ -10,6 +10,7 @@ result = []
 q = deque()
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
+
 def bfs(a, b):
     q.append((a, b))
     graph[a][b] = 0

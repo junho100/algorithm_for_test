@@ -32,3 +32,10 @@ arr = list(set(arr))
 print(arr)
 #[1, 2, 3, 4]
 ```
+
+- python에서 재귀깊이 제한풀기
+
+```
+import sys
+sys.setrecursionlimit(10000)
+```
