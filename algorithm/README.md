@@ -39,3 +39,21 @@ print(arr)
 import sys
 sys.setrecursionlimit(10000)
 ```
+
+- list comprehension
+
+```
+# if문 사용 예시 -> 1부터 10중 짝수만 골라 배열로 만들기
+a = [i for i in range(1, 11) if i%2 == 0]
+#[2,4,6,8,10]
+```
+
+- set과 차집합을 이용하여 중복 없는 경우 배열 일부분 제외한 나머지 가져오기
+
+```
+b = [1,2,3,4,5,6]
+a = [1,2,3]
+# a에 있는 요소 제외한 나머지 모두를 가져오고 싶을 때
+c = list(set(b) - set(a))
+#[4,5,6]
+```
