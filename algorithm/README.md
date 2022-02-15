@@ -57,3 +57,34 @@ a = [1,2,3]
 c = list(set(b) - set(a))
 #[4,5,6]
 ```
+
+- itertools 모듈
+
+1. product() <br>
+   여러개 배열을 넣고 중첩 for문을 사용한 것처럼 각 배열에서 하나씩 뽑아 경우의 수를 리턴한다.
+
+```
+A = [1,2,3]
+list(itertools.product(A, repeat=2))
+# [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)]
+
+A = [1,2,3]
+B = [4,5]
+list(itertools.product(A,B))
+# [(1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)]
+```
+
+2. combination()<br>
+   조합 경우의 수를 리턴
+
+```
+A = [1,2,3]
+list(itertools.combination(A, 2))
+#[(1, 2), (1, 3),(2,3)]
+```
+
+3. permutation()<br>
+   사용법 조합과 동일. 순열 리턴
+
+4. combination_with_replacement()<br>
+   사용법 조합과 동일. 중복조합 리턴
