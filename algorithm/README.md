@@ -88,3 +88,5 @@ list(itertools.combination(A, 2))
 
 4. combination_with_replacement()<br>
    사용법 조합과 동일. 중복조합 리턴
+
+- \<arr\>.index()의 시간복잡도는 O(N)이다. 시간 초과가 날 경우 딕셔너리를 이용하여 인덱스를 불러오자.
