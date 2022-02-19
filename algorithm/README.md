@@ -92,3 +92,49 @@ list(itertools.combination(A, 2))
    사용법 조합과 동일. 중복조합 리턴
 
 - \<arr\>.index()의 시간복잡도는 O(N)이다. 시간 초과가 날 경우 딕셔너리를 이용하여 인덱스를 불러오자.
+
+- 딕셔너리 관련 함수들
+
+1. 삭제
+
+```
+dic = {a : 1, b : 2, c : 3}
+del dic[b]
+print(dic)
+# {a : 1, c : 3}
+```
+
+2. key만, value만 각 각 리스트로 변환
+
+```
+#key
+dic = {a : 1, b : 2, c : 3}
+dic_keys = list(dic.keys())
+print(dic_keys)
+# [a, b, c]
+
+#value
+dic = {a : 1, b : 2, c : 3}
+dic_vals = list(dic.values())
+print(dic_vals)
+# [1, 2, 3]
+```
+
+3. key-value쌍 얻기
+
+```
+dic = {a : 1, b : 2, c : 3}
+dic_items = list(dic.items())
+print(dic_items)
+# [(a, 1), (b, 2), (c, 3)]
+```
+
+4. key값 유무 조사
+
+```
+dic = {a : 1, b : 2, c : 3}
+print(a in dic)
+# True
+print(d in dic)
+# False
+```
