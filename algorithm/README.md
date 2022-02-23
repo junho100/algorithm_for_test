@@ -138,3 +138,84 @@ print(a in dic)
 print(d in dic)
 # False
 ```
+
+- 집합 관련 함수들
+
+1. 추가 (add, update)
+
+```
+# add 함수는 하나의 값만 추가 가능
+a = set([1,2,3])
+a.add(4)
+print(a)
+# {1,2,3,4}
+
+```
+
+```
+#update 함수는 집합에 여러개 값 추가 가능
+a = set([1,2,3])
+b = set([4,5,6])
+a.update(b)
+print(a)
+# {1,2,3,4,5,6}
+```
+
+2. 제거 (remove, discard)
+
+```
+#remove는 없는 값 제거 시 key error 발생, discard는 무시
+a = set([1,2,3])
+a.remove(1)
+print(a)
+# {2,3}
+a.discard(2)
+print(a)
+{3}
+a.remove(0)
+# Key Error
+a.discard(0)
+# No Key Error
+```
+
+3. 집합의 연산
+
+```
+# 1. 합집합
+a = {1,2,3,4,5}
+b = {4,5,6}
+print(a|b)
+# {1,2,3,4,5,6}
+print(union(a, b))
+# {1,2,3,4,5,6}
+```
+
+```
+# 2. 교집합
+a = {1,2,3,4,5}
+b = {4,5,6}
+print(a&b)
+# {4,5}
+print(intersection(a, b))
+# {4,5}
+```
+
+```
+# 3. 차집합
+a = {1,2,3,4,5}
+b = {4,5,6}
+print(a-b)
+# {1,2,3}
+print(difference(a, b))
+# {1,2,3}
+```
+
+```
+# 4. 대칭차집합
+a = {1,2,3,4,5}
+b = {4,5,6}
+print(a^b)
+# {1,2,3,6}
+print(symmetric_difference(a, b))
+# {1,2,3,6}
+```

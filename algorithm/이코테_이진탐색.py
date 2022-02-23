@@ -15,7 +15,7 @@ def b_search_with_loop(arr, target, start, end):
     return None
 
 def b_search_with_recur(arr, target, start, end):
-    if start <= end:
+    if start > end:
         return None
     
     mid = (start + end) // 2
