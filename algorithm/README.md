@@ -219,3 +219,26 @@ print(a^b)
 print(symmetric_difference(a, b))
 # {1,2,3,6}
 ```
+
+4. 그 외 함수
+
+```
+# 1. clear
+# 집합안에 있는 모든 요소를 삭제
+a = {1,2,3}
+a.clear()
+print(a)
+# {}
+```
+
+```
+# 2. copy
+# 집합을 복사하여 리턴 ("="로 할당 시 원본이 변경된다.)
+a = {1,2,3}
+b = a.copy()
+b.remove(1)
+print(a)
+print(b)
+# {1,2,3}
+# {2,3}
+```
