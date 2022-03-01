@@ -1,0 +1,61 @@
+#fir,
+#sec,
+#thir {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+@media screen {
+  #fir,
+  #sec {
+    background-color: blue;
+  }
+  #thir {
+    background-color: red;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fir,
+  #thir {
+    background-color: blue;
+  }
+  #sec {
+    background-color: red;
+  }
+}
+@media screen and (max-width: 480px) {
+  #sec,
+  #thir {
+    background-color: blue;
+  }
+  #fir {
+    background-color: red;
+  }
+}
+
+h1 {
+  text-shadow: 5px 5px;
+  transition: all 2s;
+}
+.hover {
+  font-size: larger;
+}
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+#ani {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  animation: move 3s infinite;
+}
