@@ -1,3 +1,4 @@
 입양시각 구하기(2)
 join 파트 전체
 datetime에서 date로 형 변환
+테이블 만들고 CRUD
