@@ -242,3 +242,60 @@ print(b)
 # {1,2,3}
 # {2,3}
 ```
+
+- math 모듈 (수학연산)
+
+1. 올림, 내림, 반올림 연산
+
+```
+import math
+a = 3.14
+
+print(math.ceil(a))
+# 4
+print(math.floor(a))
+# 3
+print(round(a))
+print(round(a, 1))
+# 3
+# 3.1
+```
+
+2. 조합/순열 경우의 수, 팩토리얼
+
+```
+import math
+n = 5
+m = 2
+print(math.comb(n, m))
+print(math.perm(n, m))
+# 10
+# 20
+print(math.factorial(n))
+# 120
+```
+
+3. 최대공약수, 최소공배수
+
+```
+import math
+a = 2
+b = 4
+print(math.gcd(a, b))
+# 2
+a = 3
+b = 5
+print(math.lcm(a, b))
+# 15
+```
+
+4. 제곱, 제곱근
+
+```
+a = 4
+b = 2
+print(math.pow(a, b))
+print(math.sqrt(a, b))
+# 16
+# 2
+```
