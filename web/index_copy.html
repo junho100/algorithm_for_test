@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-shadow: 5px 5px;
+        transition: all 3s;
+      }
+      .hover {
+        font-size: larger;
+      }
+      @keyframes moves {
+        0% {
+          left: 0px;
+        }
+        50% {
+          left: 100px;
+        }
+        100% {
+          left: 0;
+        }
+      }
+      #ani {
+        position: relative;
+        animation: moves 3s infinite;
+      }
+      @media screen {
+        #thir {
+          color: red;
+        }
+        #fir,
+        #sec {
+          color: black;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        #sec {
+          color: red;
+        }
+        #fir,
+        #thir {
+          color: black;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #fir {
+          color: red;
+        }
+        #sec,
+        #thir {
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>transition</h1>
+    <div id="ani">animation</div>
+    <h2>media query</h2>
+    <div id="fir">~480px</div>
+    <div id="sec">480px ~ 800px</div>
+    <div id="thir">800px ~</div>
+    <h2 id="fetch">fetch</h2>
+    <h2>form</h2>
+    <form>
+        <input></input>
+        <button></button>
+    </form>
+    <div id="content"></div>
+  </body>
+  <script>
+    const tran = document.querySelector("h1");
+    tran.addEventListener("mouseover", () => {
+      tran.classList.add("hover");
+    });
+    tran.addEventListener("mouseleave", () => {
+      tran.classList.remove("hover");
+    });
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const div = document.createElement("div");
+        const t = document.querySelector("#fetch");
+        div.innerText = data.title;
+        t.insertAdjacentElement("afterend", div);
+      });
+      const f = document.querySelector("form");
+      f.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const i = document.querySelector("input");
+          const c = document.querySelector("#content");
+          c.innerText = i.value;
+      })
+  </script>
+</html>
