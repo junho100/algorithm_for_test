@@ -299,3 +299,28 @@ print(math.sqrt(a, b))
 # 16
 # 2
 ```
+
+- 소수점 자리수 계산 (round, f-string)
+
+1. round 함수 -> round(\<float\>, <자리수>)<br>
+   주의 : round함수는 매개변수로 넘겨준 자리수보다 낮은 수는 그대로 반환한다.
+
+```
+a = 3.1234
+print(round(a, 2))
+#3.12
+b = 3.1
+print(round(b, 2))
+#3.1
+```
+
+2. f-string -> print(f"{\<float\>:<자리수>f}")
+
+```
+a = 3.1234
+print(f"{a:2f}")
+#3.12
+b = 3.1
+print(f"{b:2f}")
+#3.10
+```
